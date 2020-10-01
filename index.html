@@ -16,11 +16,11 @@
       font-family: monospace;
       letter-spacing: .30em;
       margin: 0 auto;
-      border-right: .17em solid pink;
+      border-right: .17em solid;
       background-color: black;
     }
 
-    .bcg-image {
+    .with-background-image {
       background-color: black;
       background-image: url(./assets/img/czarnymotyl.png);
       background-repeat: no-repeat;
@@ -31,8 +31,11 @@
     .masthead.segment {
       min-height: 1000px;
     }
-    .masthead .ui.menu .ui.item {
+    .main-menu .ui.menu .ui.item {
       margin-left: 1em;
+    }
+    .mobile.main-menu .ui.menu .ui.item {
+      font-size: 0.7em;
     }
 
     .ui.vertical.stripe {
@@ -42,109 +45,102 @@
       margin-top: 3em;
     }
     .ui.vertical.stripe p {
-      font-size: 0.8em;
       text-align: justify;
+      font-size: 0.8em;
+    }
+    .ui.vertical.stripe li {
+      font-size: 0.8em;
     }
 
   </style>
-    <script>
-      $(document)
-        .ready(function() {
-
-          // fix menu when passed
-          $('.sticky')
-            .sticky({
-              context: '.bcg-image',
-              offset: 10,
-              bottomOffset: 10
-            })
-          ;
-
-        })
-      ;
-    </script>
 
 </head>
 <body>
 
 <!-- Page Contents -->
 
-<div class="ui two column stackable grid">
-  <div class="two wide column">
-    <div class="ui rail masthead">
-      <div class="ui vertical text secondary inverted menu sticky">
-        <a class="ui header item" href=""><img src="./assets/img/cm_logo.jpg" /></a>
-        <a class="ui item" href="#informacje">Informacje</a>
-        <a class="ui item" href="#koncerty">Koncerty</a>
-        <a class="ui item" href="#muzyka">Muzyka</a>
-        <a class="ui item" href="#kontakt">Kontakt</a>
-      </div>
+<div class="ui grid">
+  <div class="eight wide mobile only column main-menu">
+    <a class="ui image" href=""><img alt="Czarny motyl" src="./assets/img/cm_logo.jpg" /></a>
+    <div class="ui text inverted centered secondary menu">
+      <a class="ui item" href="#informacje">Informacje</a>
+      <a class="ui item" href="#koncerty">Koncerty</a>
+      <a class="ui item" href="#muzyka">Muzyka</a>
+      <a class="ui item" href="#kontakt">Kontakt</a>
     </div>
   </div>
-  <div class="fourteen wide column">
-    <div class="ui bcg-image">
-      <div class="ui vertical masthead segment center aligned"></div>
+  <div class="three wide tablet computer only column main-menu">
+    <div class="ui vertical text secondary inverted top fixed menu">
+      <a class="ui header item image" href=""><img alt="Czarny motyl" src="./assets/img/cm_logo.jpg" /></a>
+      <a class="ui item" href="#informacje">Informacje</a>
+      <a class="ui item" href="#koncerty">Koncerty</a>
+      <a class="ui item" href="#muzyka">Muzyka</a>
+      <a class="ui item" href="#kontakt">Kontakt</a>
+    </div>
+  </div>
+  <div class="twelve wide computer sixteen wide mobile column with-background-image">
+    <div class="ui vertical masthead segment"></div>
 
-      <div class="ui inverted vertical stripe segment" id="informacje">
-        <div class="ui text container">
-        <h2 class="ui header">Informacje</h2>
-        <p>
-          Czarny Motyl to projekt art brutowy (instynktowny, nieprofesjonalny) splatający skrajnie różne dźwięki i kolory, będące połączeniem muzyki ludowej z eksperymentalną, jak również poezji śpiewanej z punck rockiem.
-        </p>
-        <p>
-          To muzyczna wędrówka poprzez łąki i pola zarówno w słońcu jak i w rzęsistym deszczu.
-          Obrazy, które powstają z dźwięków bazujących na ludowym instrumentarium i melancholii otaczającej rzeczywistości, choć taneczne, nie są zbyt radosne. Mają jednak na celu przynosić pozytywne emocje, ukojenie smutków oraz pobudzać radość zarówno z jasnych jak i ciemnych stron życia.
-        </p>
-        <p>
-            Michał Radmacher (programista) i Violka Radmacher (paleoklimatolog), po latach działalności muzycznej związanej z krakowskimi grupami takimi jak Południca!, Hańba!, Balkan Artz, Iglika), w roku 2018 rozpoczęli prace nad pierwszym autorskim projektem pt. „Maszyna do robienia słońca” (głos – Regina Warska).
-            W roku 2020 powstała pierwsza ich wspólna płyta pt. „Maszyna do suszenia łez” (głos, flet – Violka Radmacher, akordeon, klarnet – Michał Radmacher) na której zagościli również: Antonina Witkowksa (wiolonczela), Andrzej Zagajewski (pozytywki) oraz Tichomir Ivan (instrumenty perkusyjne).
-        </p>
-        </div>
+    <div class="ui inverted vertical stripe segment" id="informacje">
+      <div class="ui text container">
+      <h2 class="ui grey header">Informacje</h2>
+      <p>
+        Czarny Motyl to projekt art brutowy (instynktowny, nieprofesjonalny) splatający skrajnie różne dźwięki i kolory, będące połączeniem muzyki ludowej z eksperymentalną, jak również poezji śpiewanej z punck rockiem.
+      </p>
+      <p>
+        To muzyczna wędrówka poprzez łąki i pola zarówno w słońcu jak i w rzęsistym deszczu.
+        Obrazy, które powstają z dźwięków bazujących na ludowym instrumentarium i melancholii otaczającej rzeczywistości, choć taneczne, nie są zbyt radosne. Mają jednak na celu przynosić pozytywne emocje, ukojenie smutków oraz pobudzać radość zarówno z jasnych jak i ciemnych stron życia.
+      </p>
+      <p>
+          Michał Radmacher (programista) i Violka Radmacher (paleoklimatolog), po latach działalności muzycznej związanej z krakowskimi grupami takimi jak Południca!, Hańba!, Balkan Artz, Iglika), w roku 2018 rozpoczęli prace nad pierwszym autorskim projektem pt. „Maszyna do robienia słońca” (głos – Regina Warska).
+          W roku 2020 powstała pierwsza ich wspólna płyta pt. „Maszyna do suszenia łez” (głos, flet – Violka Radmacher, akordeon, klarnet – Michał Radmacher) na której zagościli również: Antonina Witkowska (wiolonczela), Andrzej Zagajewski (pozytywki) oraz Tichomir Ivan (instrumenty perkusyjne).
+      </p>
       </div>
+    </div>
 
-      <div class="ui vertical stripe segment"></div>
+    <div class="ui vertical stripe segment"></div>
 
-      <div class="ui inverted vertical stripe segment" id="koncerty">
-        <div class="ui text container">
-        <h2 class="ui header">Koncerty</h2>
+    <div class="ui inverted vertical stripe segment" id="koncerty">
+      <div class="ui text container">
+        <h2 class="ui grey header">Koncerty</h2>
         <p>
             <ul>
               <li>29.08.2020 - Koncert na Skalance</li>
               <li>09.02.2020 - Klub Buda, Kraków</li>
             </ul>
         </p>
-        </div>
       </div>
-
-      <div class="ui vertical stripe segment"></div>
-
-      <div class="ui inverted vertical stripe segment" id="muzyka">
-        <div class="ui container">
-            <h2 class="ui header">Muzyka</h2>
-            <iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623492016&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/czarny-motyl" title="Czarny motyl" target="_blank" style="color: #cccccc; text-decoration: none;">Czarny motyl</a> · <a href="https://soundcloud.com/czarny-motyl/sets/maszyna-do-robienia-slonca" title="Maszyna do robienia słońca" target="_blank" style="color: #cccccc; text-decoration: none;">Maszyna do robienia słońca</a></div>
-            <iframe src="https://www.youtube-nocookie.com/embed/2y4dzcalT-c?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-            <iframe src="https://www.youtube-nocookie.com/embed/9-b9-_XoyVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe src="https://www.youtube-nocookie.com/embed/l8KWzT9EpvQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-      </div>
-
-      <div class="ui vertical stripe segment"></div>
-
-      <div class="ui inverted vertical stripe segment" id="kontakt">
-        <div class="ui text container">
-            <h2 class="ui header">Kontakt</h2>
-            <p>
-              <a href="mailto:violakrol@gmail.com">violakrol@gmail.com</a>
-            </p>
-            <p>
-              <a href="https://www.facebook.com/Czarny-Motyl-240024852729147/" target="_blank">FB</a>
-            </p>
-        </div>
-      </div>
-
-      <div class="ui vertical stripe segment"></div>
     </div>
+
+    <div class="ui vertical stripe segment"></div>
+
+    <div class="ui inverted vertical stripe segment" id="muzyka">
+      <div class="ui text container">
+        <h2 class="ui grey header">Muzyka</h2>
+        <iframe width="100%" height="300" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623492016&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/czarny-motyl" title="Czarny motyl" target="_blank" style="color: #cccccc; text-decoration: none;">Czarny motyl</a> · <a href="https://soundcloud.com/czarny-motyl/sets/maszyna-do-robienia-slonca" title="Maszyna do robienia słońca" target="_blank" style="color: #cccccc; text-decoration: none;">Maszyna do robienia słońca</a></div>
+        <iframe src="https://www.youtube-nocookie.com/embed/2y4dzcalT-c?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <iframe src="https://www.youtube-nocookie.com/embed/9-b9-_XoyVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe src="https://www.youtube-nocookie.com/embed/l8KWzT9EpvQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div class="ui vertical stripe segment"></div>
+
+    <div class="ui inverted vertical stripe segment" id="kontakt">
+      <div class="ui text container">
+        <h2 class="ui grey header">Kontakt</h2>
+        <p>
+          <a href="mailto:violakrol@gmail.com">violakrol@gmail.com</a>
+        </p>
+        <p>
+          <a class="ui image" href="https://www.facebook.com/Czarny-Motyl-240024852729147/" target="_blank"><img alt="Facebook" src="./assets/img/facebook_icon.png" /></a>
+          <a class="ui image" href="https://www.instagram.com/czarnymotyl.art" target="_blank"><img alt="Instagram" src="./assets/img/instagram_icon.png" /></a>
+        </p>
+      </div>
+    </div>
+
+    <div class="ui vertical stripe segment"></div>
   </div>
 </body>
 
