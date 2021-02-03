@@ -1,0 +1,9 @@
+<button class="mini inverted basic ui button lyrics" id="{{ include.id }}">{{ include.title }}</button>
+<div class="ui modal" id="{{ include.id }}-lyrics">
+  <div class="header">{{ include.title }}</div>
+  <div class="content">
+    {% include lyrics/{{ include.id }}.html %}
+    <blockquote>{{ include.author }}</blockquote>
+  </div>
+  <div class="actions"><div class="ui cancel button">X</div></div>
+</div>

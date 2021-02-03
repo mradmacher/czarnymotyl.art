@@ -1,0 +1,42 @@
+body {
+  font-family: monospace;
+  letter-spacing: .20em;
+  margin: 0 auto;
+  border-right: .17em solid;
+  background-color: black;
+}
+
+.with-background-image {
+  background-color: black;
+  background-image: url(/assets/img/czarnymotyl.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.masthead.segment {
+  min-height: 1000px;
+}
+.main-menu .ui.menu .ui.item {
+  text-align: right;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.mobile.main-menu .ui.menu .ui.item {
+  font-size: 0.7em;
+  margin-right: 0;
+}
+
+.ui.vertical.stripe {
+  padding: 8em 0em;
+}
+.ui.vertical.stripe p + h2 {
+  margin-top: 3em;
+}
+.ui.vertical.stripe p {
+  text-align: justify;
+  font-size: 0.8em;
+}
+.ui.vertical.stripe li {
+  font-size: 0.8em;
+}

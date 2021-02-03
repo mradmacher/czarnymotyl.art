@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +13,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
   <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+  <link rel="stylesheet" href="/assets/css/main.css">
 
   <script>
     $(function() {
@@ -19,60 +22,14 @@
         $('.ui.basic.modal').find('img').attr('src', $(this).attr('src').replace('_md', ''));
         $('.ui.basic.modal').modal('show');
       });
+      $('button.lyrics').click(function() {
+        $('#' + $(this).attr('id') + '-lyrics').modal('show');
+      });
     });
   </script>
 
-  <style type="text/css">
-    body {
-      font-family: monospace;
-      letter-spacing: .20em;
-      margin: 0 auto;
-      border-right: .17em solid;
-      background-color: black;
-    }
-
-    .with-background-image {
-      background-color: black;
-      background-image: url(./assets/img/czarnymotyl.png);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-attachment: fixed;
-    }
-
-    .masthead.segment {
-      min-height: 1000px;
-    }
-    .main-menu .ui.menu .ui.item {
-      text-align: right;
-      margin-left: 1em;
-      margin-right: 1em;
-    }
-    .mobile.main-menu .ui.menu .ui.item {
-      font-size: 0.7em;
-      margin-right: 0;
-    }
-
-    .ui.vertical.stripe {
-      padding: 8em 0em;
-    }
-    .ui.vertical.stripe p + h2 {
-      margin-top: 3em;
-    }
-    .ui.vertical.stripe p {
-      text-align: justify;
-      font-size: 0.8em;
-    }
-    .ui.vertical.stripe li {
-      font-size: 0.8em;
-    }
-
-  </style>
-
 </head>
 <body>
-
-<!-- Page Contents -->
-
 <div class="ui grid">
   <div class="eight wide mobile tablet only column main-menu">
     <a class="ui image" href=""><img alt="Czarny motyl" src="./assets/img/cm_logo.png" /></a>
@@ -100,21 +57,7 @@
     <div class="ui inverted vertical stripe segment" id="informacje">
       <div class="ui text container">
         <h2 class="ui grey header">Informacje</h2>
-        <p>
-          Czarny Motyl to projekt art brutowy (instynktowny, nieprofesjonalny) splatający skrajnie różne dźwięki i kolory, będące połączeniem muzyki ludowej z eksperymentalną, jak również poezji śpiewanej z punck rockiem.
-        </p>
-        <p>
-          To muzyczna wędrówka poprzez łąki i pola zarówno w słońcu jak i w rzęsistym deszczu.
-        </p>
-        <p>
-          Obrazy, które powstają z dźwięków bazujących na ludowym instrumentarium i melancholii otaczającej rzeczywistości, choć taneczne, nie są zbyt radosne. Mają jednak na celu przynosić pozytywne emocje, ukojenie smutków oraz pobudzać radość zarówno z jasnych jak i ciemnych stron życia.
-        </p>
-        <p>
-            Michał Radmacher i Violka Radmacher, po latach działalności muzycznej (Południca!, Bumtralala, Hańba!, Iglika, Kapela Czernichowska, Słowianki), w roku 2018, wraz z zaprzyjaźnionymi muzykami, wydali pierwszą płytę pod tytułem „Maszyna do robienia słońca”.
-        </p>
-        <p>
-            Aktualnie, w roku 2020, powstał ich całkowicie autorski projekt „Maszyna do suszenia łez” (Violka - głos, flet, teksty, muzyka; Michał - akordeon, klarnet, kawal, aranżacje) w którym zagościli również Antonina Witkowska (wiolonczela), Tichomir Ivan (perkusjonalia), Gosia Lempart (harmonijka) oraz Andrzej Zagajewski (pozytywki).
-        </p>
+        {% include info.html %}
       </div>
     </div>
 
@@ -123,12 +66,7 @@
     <div class="ui inverted vertical stripe segment" id="koncerty">
       <div class="ui text container">
         <h2 class="ui grey header">Koncerty</h2>
-        <p>
-            <ul>
-              <li>29.08.2020 - Koncert na Skalance</li>
-              <li>09.02.2020 - Klub Buda, Kraków</li>
-            </ul>
-        </p>
+        {% include concerts.html %}
       </div>
     </div>
 
@@ -138,19 +76,15 @@
       <div class="ui text container">
         <h2 class="ui grey header">Muzyka</h2>
         <h3 class="ui inverted header"><q>Maszyna do suszenia łez</q><div class="ui inverted sub header">2020</div></h3>
-        <iframe width="100%" height="350" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1151140820&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/czarny-motyl" title="Czarny motyl" target="_blank" style="color: #cccccc; text-decoration: none;">Czarny motyl</a> · <a href="https://soundcloud.com/czarny-motyl/sets/maszyna-do-suszenia-lez" title="Maszyna do suszenia łez" target="_blank" style="color: #cccccc; text-decoration: none;">Maszyna do suszenia łez</a></div>
+        <iframe width="100%" height="350" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1151140820&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/czarny-motyl" title="Czarny motyl" target="_blank" style="color: #cccccc; text-decoration: none;">Czarny motyl</a> · <a href="https://soundcloud.com/czarny-motyl/sets/maszyna-do-suszenia-lez" title="Maszyna do suszenia łez" target="_blank" style="color: #cccccc; text-decoration: none;">Maszyna do suszenia łez</a></div>
         <br />
         <h3 class="ui inverted header"><q>Maszyna do robienia słońca</q><div class="ui inverted sub header">2018</div></h3>
-        <iframe width="100%" height="350" scrolling="yes" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623492016&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/czarny-motyl" title="Czarny motyl" target="_blank" style="color: #cccccc; text-decoration: none;">Czarny motyl</a> · <a href="https://soundcloud.com/czarny-motyl/sets/maszyna-do-robienia-slonca" title="Maszyna do robienia słońca" target="_blank" style="color: #cccccc; text-decoration: none;">Maszyna do robienia słońca</a></div>
-        <br />
-        <iframe src="https://www.youtube-nocookie.com/embed/EeMhqEV6ahY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://www.youtube-nocookie.com/embed/HK5taVmR3lo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <iframe src="https://www.youtube-nocookie.com/embed/tj2cjcW2MsI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://www.youtube-nocookie.com/embed/2y4dzcalT-c?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-        <iframe src="https://www.youtube-nocookie.com/embed/9-b9-_XoyVw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <iframe src="https://www.youtube-nocookie.com/embed/l8KWzT9EpvQ" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <p><a class="big inverted black ui button" href="https://www.karoryfer.com/czarny-motyl/maszyna-do-robienia-slonca/zip?f=flac" rel="nofollow">Pobierz</a></p>
+        <iframe width="100%" height="350" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/623492016&color=%23ff5500&auto_play=false&hide_related=true&show_comments=false&show_user=false&show_reposts=false&show_teaser=true&visual=false"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/czarny-motyl" title="Czarny motyl" target="_blank" style="color: #cccccc; text-decoration: none;">Czarny motyl</a> · <a href="https://soundcloud.com/czarny-motyl/sets/maszyna-do-robienia-slonca" title="Maszyna do robienia słońca" target="_blank" style="color: #cccccc; text-decoration: none;">Maszyna do robienia słońca</a></div>
+        <h4 class="ui inverted header">Teksty</h4>
+        {% include texts.html %}
+        <h4 class="ui inverted header">Teledyski</h4>
+        {% include videos.html %}
       </div>
     </div>
 
@@ -159,16 +93,7 @@
     <div class="ui inverted vertical stripe segment" id="prasa">
       <div class="ui text container">
         <h2 class="ui grey header">Prasa</h2>
-        <p>
-          <i><q>Wybuchowo nastrojowa fuzja folku miejskiego, psychodelii i mocno pokręcono-zakręconej poezji śpiewanej, bardzo przejmująco zaśpiewanej. Miesza się tu wiele światów – od tych, które już nie istnieją (szczypta klezmerki z ulicznego bruku), po współczesne oko blokowisk ale i transów autentycznie odrapanych kamienic i szemranych klatek schodowych, które też są piękne na swój sposób.  Tej muzyki nie da się jednoznacznie opisać.</q></i>
-          <p>Witt Wilczyński, Gniazdo nr 2(21)/2020</p>
-        </p>
-
-        <ul>
-          <li><a href="https://folk24.pl/wywiady/baba-o-zelaznych-zebach/" target="_blank">Folk24.pl - Baba o żelaznych zębach</a></li>
-          <li><a href="https://folk24.pl/w-folkowym-tonie/teledyski-etno-folkowe-ad-2019/" target="_blank">Folk24.pl - Teledyski etno-folkowe a.d. 2019</a></li>
-          <li><a href="https://folk24.pl/wiesci/krowki-sa-z-marca/" target="_blank">Folk24.pl - Krówki są z marca</a></li>
-        </ul>
+        {% include press.html %}
 
         <div class="ui basic modal">
           <div class="actions">
@@ -181,54 +106,7 @@
           </div>
         </div>
 
-        <div class="ui grid">
-          <div class="sixteen wide column">
-            <img class="ui circular medium centered image press" src="assets/img/czarnymotyl_xx8_md.jpg" />
-          </div>
-
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_xx5_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_xx0_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_xx4_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_x13_md.jpg" />
-          </div>
-
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_xx7_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_x11_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_x12_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular small centered image press" src="assets/img/czarnymotyl_xx9_md.jpg" />
-          </div>
-
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui small circular centered image press" src="assets/img/czarnymotyl_xx3_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui small circular centered image press" src="assets/img/czarnymotyl_xx1_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular centered image press" src="assets/img/czarnymotyl_x10_md.jpg" />
-          </div>
-          <div class="eight wide mobile four wide tablet four wide computer column">
-            <img class="ui circular centered image press" src="assets/img/czarnymotyl_xx2_md.jpg" />
-          </div>
-
-          <div class="sixteen wide column">
-            <img class="ui circular medium centered image press" src="assets/img/czarnymotyl_xx6_md.jpg" />
-          </div>
-        </div>
+        {% include images.html %}
 
       </div>
 
@@ -239,14 +117,7 @@
     <div class="ui inverted vertical stripe segment" id="kontakt">
       <div class="ui text container">
         <h2 class="ui grey header">Kontakt</h2>
-        <p>
-          <a href="mailto:violakrol@gmail.com">violakrol@gmail.com</a>
-        </p>
-        <p>
-          <a class="ui image" href="https://www.instagram.com/czarnymotyl.art" target="_blank"><img title="Instagram" alt="Instagram" src="./assets/img/instagram_logo.png" /></a>
-          <a class="ui image" href="https://www.facebook.com/czarnymotylart/" target="_blank"><img title="Facebook" alt="Facebook" src="./assets/img/facebook_logo.png" /></a>
-          <a class="ui image" href="https://www.karoryfer.com/czarny-motyl" target="_blank"><img title="Karoryfer Lecolds" alt="Karoryfer Lecolds" src="./assets/img/karoryfer_logo.png" /></a>
-        </p>
+        {% include contact.html %}
       </div>
     </div>
 
