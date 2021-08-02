@@ -1,0 +1,8 @@
+<button class="mini inverted basic ui button attribution" id="{{ include.id }}">Obsada</button>
+<div class="ui modal" id="{{ include.id }}-attribution">
+  <div class="header">{{ include.title }}</div>
+  <div class="content">
+    {% include {{ include.id }}.html %}
+  </div>
+  <div class="actions"><div class="ui cancel button">X</div></div>
+</div>
