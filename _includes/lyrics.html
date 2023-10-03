@@ -1,5 +1,5 @@
 {%- for lyrics in site.lyrics -%}
-  <button class="mini inverted basic ui button lyrics" id="lyrics-{{ forloop.index }}">{{ lyrics.title }}</button>
+  <button class="ui inverted basic button lyrics" id="lyrics-{{ forloop.index }}">{{ lyrics.title }}</button>
   <div class="ui modal" id="lyrics-{{ forloop.index }}-modal">
     <div class="header">{{ lyrics.title }}</div>
     <div class="content">

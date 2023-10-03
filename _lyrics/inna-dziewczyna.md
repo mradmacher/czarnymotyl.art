@@ -3,36 +3,36 @@ title: Inna dziewczyna
 ---
 > o matce, która oczekuje, że jej córka będzie inna niż ona i córce, która chciałaby być inna niż jej matka
 
-wracasz nad ranem z pustką w głowie<br />
-twe usta już nie są tak karmazynowe<br />
-jak wczoraj gdy trzaskałaś drzwiami<br />
-wychodząc z uroczym panem<br />
-z tatuażami<br />
+wracasz nad ranem z pustką w głowie
+twe usta już nie są tak karmazynowe
+jak wczoraj gdy trzaskałaś drzwiami
+wychodząc z uroczym panem
+z tatuażami
 
-wyblakły makijaż sukienka pomięta<br />
-rzęsy wyblakłe nie wszystko pamięta<br />
+wyblakły makijaż sukienka pomięta
+rzęsy wyblakłe nie wszystko pamięta
 
-a może to jakaś inna dziewczyna<br />
-za którą unosi się zapach<br />
-dużej ilości wina<br />
-(moja wina moja wina)<br />
+a może to jakaś inna dziewczyna
+za którą unosi się zapach
+dużej ilości wina
+(moja wina moja wina)
 
-nie spałam całą noc pobędę tu przy tobie<br />
-nie spałam całą noc pobędę tu sobie<br />
-nie spałam całą noc pobędę tu przy tobie<br />
-kiedy się obudzisz opowiesz mi może<br />
+nie spałam całą noc pobędę tu przy tobie
+nie spałam całą noc pobędę tu sobie
+nie spałam całą noc pobędę tu przy tobie
+kiedy się obudzisz opowiesz mi może
 
-czy ja to ja czy ty jesteś moja<br />
-czy ty to ty czy ja jestem twoja<br />
-czy ja to ty czy ty jesteś moja<br />
-czy ty to ja czy ja jestem twoja<br />
-czy ja to ty czy ty jesteś moja<br />
-czy ty to ja<br />
+czy ja to ja czy ty jesteś moja
+czy ty to ty czy ja jestem twoja
+czy ja to ty czy ty jesteś moja
+czy ty to ja czy ja jestem twoja
+czy ja to ty czy ty jesteś moja
+czy ty to ja
 
-ja zawsze będę twoja<br />
+ja zawsze będę twoja
 
-czy ty to ta sama miła dziewczyna<br />
-którą głaskałam gdy śniła<br />
-o kolorowych motylach<br />
+czy ty to ta sama miła dziewczyna
+którą głaskałam gdy śniła
+o kolorowych motylach
 
 > Viola Radmacher

@@ -30,7 +30,8 @@ Lepszy spisek niż czekanie
 
 Na tyrana zmiłowanie
 
----
+-
+
 Gonią gonią coraz prędzej
 Głodne hieny dyszą dziko
 Byle dalej byle dalej
@@ -42,14 +43,16 @@ Lepszy spisek niż czekanie
 
 Na tyrana zmiłowanie
 
----
+-
+
 W oczy kole hańby ziarno
 To już w głowie się nie mieści
 Przenigdy cię nie oddam
 Kochankowi
 od siedmiu boleści
 
----
+-
+
 Trzeba szlakiem iść wygnania
 Jak nędzarze w dziki kraj
 Gdzie ziemia obiecana
