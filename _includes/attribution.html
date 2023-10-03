@@ -1,8 +1,19 @@
-<button class="mini inverted basic ui button attribution" id="{{ include.id }}">Obsada</button>
-<div class="ui modal" id="{{ include.id }}-attribution">
+{% assign album = site.data.albums | where:"title",include.title | first %}
+{% assign album_slug = album.title | slugify %}
+<button class="ui inverted basic button lyrics" id="attribution-{{ album_slug }}">Obsada</button>
+<div class="ui modal" id="attribution-{{ album_slug }}-modal">
   <div class="header">{{ include.title }}</div>
   <div class="content">
-    {% include {{ include.id }}.html %}
+    <ol>
+    {%- for track in album.tracks -%}
+      <li>
+        {{ track.title }}<br />
+        <small>{{ track.attribution | markdownify }}</small>
+      </li>
+    {%- endfor -%}
+    </ol>
+    <hr />
+    {{ album.attribution | markdownify }}
   </div>
   <div class="actions"><div class="ui cancel button">X</div></div>
 </div>
