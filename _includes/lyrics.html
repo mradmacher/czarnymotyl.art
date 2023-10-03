@@ -1,9 +1,10 @@
-<button class="mini inverted basic ui button lyrics" id="{{ include.id }}">{{ include.title }}</button>
-<div class="ui modal" id="{{ include.id }}-lyrics">
-  <div class="header">{{ include.title }}</div>
-  <div class="content">
-    {% include lyrics/{{ include.id }}.html %}
-    <blockquote>{{ include.author }}</blockquote>
+{%- for lyrics in site.lyrics -%}
+  <button class="mini inverted basic ui button lyrics" id="lyrics-{{ forloop.index }}">{{ lyrics.title }}</button>
+  <div class="ui modal" id="lyrics-{{ forloop.index }}-modal">
+    <div class="header">{{ lyrics.title }}</div>
+    <div class="content">
+      {{ lyrics.output }}
+    </div>
+    <div class="actions"><div class="ui cancel button">X</div></div>
   </div>
-  <div class="actions"><div class="ui cancel button">X</div></div>
-</div>
+{%- endfor -%}

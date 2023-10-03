@@ -23,7 +23,7 @@
         $('.ui.basic.modal').modal('show');
       });
       $('button.lyrics').click(function() {
-        $('#' + $(this).attr('id') + '-lyrics').modal('show');
+        $('#' + $(this).attr('id') + '-modal').modal('show');
       });
       $('button.attribution').click(function() {
         $('#' + $(this).attr('id') + '-attribution').modal('show');
@@ -80,7 +80,7 @@
         <h2 class="ui grey header">Muzyka</h2>
         {% include albums.html %}
         <h4 class="ui inverted header">Teksty</h4>
-        {% include texts.html %}
+        {% include lyrics.html %}
         <h4 class="ui inverted header">Teledyski</h4>
         {% include videos.html %}
       </div>
