@@ -53,6 +53,8 @@ kramdown:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+exclude:
+  - bin/
 
 collections:
   - lyrics
