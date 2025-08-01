@@ -1,23 +1,27 @@
 <p>
   <ul class="ui list">
-    {% for event in site.data.events.current %}
+    {%- assign current_events = site.data.events | where: "status", "current" -%}
+    {%- for event in current_events -%}
       <li class="item">
-        <strong>{{ event.date }}</strong>
-        {{ event.locations | join: ", " }}
+        <strong>{{ event.date }}</strong>&nbsp;
+        {% capture descriptions %}{{event.name}};{{event.venue}};{{event.town}};{{event.location}}{% endcapture %}
+        {{ descriptions | split: ";" | compact_empty | join: ", " }}
         {% if event.url %}
           <a href="{{ event.url }}">&nbsp;<i class="arrow right icon"></i></a></li>
         {% endif %}
       </li>
-    {% endfor %}
+    {%- endfor -%}
   </ul>
 </p>
 <p>
   <h3 class="ui grey header">Te które się już zdarzyły</h3>
   <ul class="ui list">
-    {% for event in site.data.events.archived %}
+    {%- assign archived_events = site.data.events | where: "status", "archived" -%}
+    {% for event in archived_events %}
       <li>
-        <strong>{{ event.date }}</strong>
-        {{ event.locations | join: ", " }}
+        <strong>{{ event.date }}</strong>&nbsp;
+        {% capture descriptions %}{{event.name}};{{event.venue}};{{event.town}};{{event.location}}{% endcapture %}
+        {{ descriptions | split: ";" | compact_empty | join: ", " }}
         {% if event.url %}
           <a href="{{ event.url }}">&nbsp;<i class="arrow right icon"></i></a></li>
         {% endif %}
