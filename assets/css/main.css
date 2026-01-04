@@ -8,10 +8,11 @@ body {
 
 .with-background-image {
   background-color: black;
-  background-image: url(/assets/img/czarnymotyl.png);
+  background-image: url(/assets/img/czarnymotyl.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
+  background-size: contain;
 }
 
 .masthead.segment {
@@ -39,4 +40,8 @@ body {
 }
 .ui.vertical.stripe li {
   font-size: 0.8em;
+}
+
+iframe.video {
+  margin: 0.8em;
 }
